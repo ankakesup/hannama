@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile">
+
+    <TextView
+        android:id="@+id/textProfileTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="プロフィール"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="32dp"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imageIcon"
+        android:layout_width="140dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="@id/textProfileTitle"
+        app:layout_constraintTop_toBottomOf="@id/textProfileTitle"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="名前： 名城 太郎"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:textSize="16dp"
+        app:layout_constraintStart_toEndOf="@id/imageIcon"
+        app:layout_constraintTop_toTopOf="@id/imageIcon"/>
+
+    <EditText
+        android:id="@+id/editAge"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:ems="3"
+        android:inputType="text"
+        android:text="年齢： 20"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="@id/editName"
+        app:layout_constraintTop_toBottomOf="@id/editName" />
+
+    <CheckBox
+        android:id="@+id/checkMan"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:text="男"
+        android:textSize="12dp"
+        app:layout_constraintStart_toEndOf="@id/editAge"
+        app:layout_constraintTop_toTopOf="@id/editAge"/>
+
+    <CheckBox
+        android:id="@+id/checkWoman"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:text="女"
+        android:textSize="12dp"
+        app:layout_constraintStart_toEndOf="@id/checkMan"
+        app:layout_constraintTop_toTopOf="@id/checkMan"/>
+
+    <EditText
+        android:id="@+id/editAddress"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="住所:"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageIcon"/>
+
+    <EditText
+        android:id="@+id/editNearestStation"
+        android:layout_width="300dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="最寄り駅:"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@id/editAddress"
+        app:layout_constraintTop_toBottomOf="@id/editAddress"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/checkbox_on_background"
+        tools:layout_editor_absoluteX="289dp"
+        tools:layout_editor_absoluteY="193dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">hannama</string>
+    <string-array name="language_array">
+        <item>日本語</item>
+        <item>English</item>
+        <item>Français</item>
+        <item>Deutsch</item>
+        <item>中文</item>
+    </string-array>
 </resources>

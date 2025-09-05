@@ -9,6 +9,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import jp.ac.meijou.android.hannama.databinding.ActivityMainBinding;
+import jp.ac.meijou.android.hannama.databinding.CategoryWidgetBinding;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,5 +26,25 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        // カテゴリウィジェットのテキストを設定
+        setupCategoryWidgets();
+    }
+
+    /**
+     * カテゴリウィジェットのテキストを設定するメソッド
+     */
+    private void setupCategoryWidgets() {
+        // 飲食店カテゴリのテキスト設定
+        CategoryWidgetBinding foodCategoryBinding = binding.foodCategory;
+        foodCategoryBinding.categoryTitle.setText("# 飲食店");
+
+        // ホテルカテゴリのテキスト設定
+        CategoryWidgetBinding hotelCategoryBinding = binding.hotelCategory;
+        hotelCategoryBinding.categoryTitle.setText("# ホテル");
+
+        // 観光地カテゴリのテキスト設定
+        CategoryWidgetBinding sightseeingCategoryBinding = binding.sightseeingCategory;
+        sightseeingCategoryBinding.categoryTitle.setText("# 観光地");
     }
 }

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/category_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:id="@+id/category_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="#b53eaf"
+        android:paddingStart="8dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="# カテゴリ"
+        />
+
+    <ImageView
+        android:id="@+id/category_image"
+        android:layout_width="150dp"
+        android:layout_height="94dp"
+        android:paddingTop="5dp"
+        app:layout_constraintStart_toStartOf="@id/category_title"
+        app:layout_constraintTop_toBottomOf="@id/category_title"
+        app:srcCompat="@drawable/demo_picture" />
+
+    <TextView
+        android:id="@+id/category_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/category_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/category_title"
+        android:text="これはイメージです。\nここにAIが説明を書いてくれる予定" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

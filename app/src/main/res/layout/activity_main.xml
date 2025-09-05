@@ -61,5 +61,6 @@
         app:layout_constraintTop_toTopOf="@+id/Search"
         app:layout_constraintBottom_toBottomOf="@+id/Search"
          />
+    <include layout="@layout/toolbar_home_widget"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

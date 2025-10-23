@@ -1,14 +1,11 @@
 package jp.ac.meijou.android.hannama.maps;
 
-import static android.location.LocationManager.FUSED_PROVIDER;
 
-import android.Manifest;
 import android.app.Activity;
 import android.content.pm.PackageManager;
 import android.location.LocationManager;
 import android.util.Log;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 public class location {
@@ -45,7 +42,7 @@ public class location {
             // for ActivityCompat#requestPermissions for more details.
             return;
         }
-        mlocationManager.requestLocationUpdates(mlocationManager.FUSED_PROVIDER, 30, 30, location -> {;
+        mlocationManager.requestLocationUpdates(mlocationManager.GPS_PROVIDER, 30, 30, location -> {
             double latitude = location.getLatitude();
             double longitude = location.getLongitude();
             Log.d("Location", "Latitude: " + latitude + ", Longitude: " + longitude);

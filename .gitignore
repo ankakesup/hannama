@@ -13,3 +13,5 @@
 .externalNativeBuild
 .cxx
 local.properties
+/app/src/main/java/jp/ac/meijou/android/hannama/Test.java
+/app/src/main/res/layout/activity_test.xml

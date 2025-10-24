@@ -11,6 +11,8 @@ import androidx.core.app.ActivityCompat;
 public class location {
 
     Activity activity;
+
+    public double latitude, longitude;
     LocationManager mlocationManager;
 
     public location(Activity activity, LocationManager locationManager) {
@@ -43,8 +45,8 @@ public class location {
             return;
         }
         mlocationManager.requestLocationUpdates(mlocationManager.GPS_PROVIDER, 30, 30, location -> {
-            double latitude = location.getLatitude();
-            double longitude = location.getLongitude();
+            latitude = location.getLatitude();
+            longitude = location.getLongitude();
             Log.d("Location", "Latitude: " + latitude + ", Longitude: " + longitude);
         });
     }
